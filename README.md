@@ -1,4 +1,4 @@
-# ohtu-2019-viikko1 :space_invader:
+# ohtu-2019-tehtavat :space_invader:
 
 ***
 [ohtu-viikko1-tehtavat1-13](https://github.com/kriskrok/ohtu-2019-viikko1)
