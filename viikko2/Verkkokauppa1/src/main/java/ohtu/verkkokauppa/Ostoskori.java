@@ -1,7 +1,9 @@
 package ohtu.verkkokauppa;
 
+import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 
+@Component
 public class Ostoskori {
     ArrayList<Tuote> tuotteet;
 

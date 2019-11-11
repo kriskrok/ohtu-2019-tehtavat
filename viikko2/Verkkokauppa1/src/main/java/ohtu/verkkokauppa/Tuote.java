@@ -6,6 +6,7 @@ public class Tuote {
     private String nimi;
     private int hinta;
 
+
     public Tuote(int id, String nimi, int hinta) {
         this.id = id;
         this.nimi = nimi;
