@@ -11,11 +11,8 @@ public class Nollaa extends Komento {
 
     @Override
     public void suorita() {
+        talletaNykyinenTulos();
         sovellus.nollaa();
         paivitaNaytto();
-    }
-
-    public void peru() {
-
     }
 }

@@ -11,12 +11,8 @@ public class Summa extends Komento {
 
     @Override
     public void suorita() {
+        talletaNykyinenTulos();
         sovellus.plus(lueLuku());
         paivitaNaytto();
-    }
-
-    @Override
-    public void peru() {
-        
     }
 }

@@ -4,6 +4,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public abstract class Komento {
+    protected int edellinenArvo;
     protected TextField tuloskentta;
     protected TextField syotekentta;
     protected Button nollaa;
@@ -17,11 +18,16 @@ public abstract class Komento {
         this.nollaa = nollaa;
         this.undo = undo;
         this.sovellus = sovellus;
+        this.edellinenArvo = 0;
     }
 
     public abstract void suorita();
 
-    public abstract void peru();
+    public void peru() {
+        sovellus.setTulos(edellinenArvo);
+        paivitaNaytto();
+        undo.disableProperty().set(true);
+    };
 
     protected int lueLuku() {
         int arvo = 0;
@@ -45,5 +51,9 @@ public abstract class Komento {
         else nollaa.disableProperty().set(false);
 
         undo.disableProperty().set(false);
+    }
+
+    protected void talletaNykyinenTulos() {
+        this.edellinenArvo = sovellus.tulos();
     }
 }

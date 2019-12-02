@@ -11,12 +11,8 @@ public class Erotus extends Komento {
 
     @Override
     public void suorita() {
+        talletaNykyinenTulos();
         sovellus.miinus(lueLuku());
         paivitaNaytto();
-    }
-
-    @Override
-    public void peru() {
-
     }
 }
