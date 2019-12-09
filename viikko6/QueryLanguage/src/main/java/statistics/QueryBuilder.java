@@ -1,7 +1,6 @@
 package statistics;
 
 import java.util.*;
-
 import statistics.matcher.*;
 
 public class QueryBuilder {
@@ -35,4 +34,8 @@ public class QueryBuilder {
         return this;
     }
 
+    public QueryBuilder oneOf(Matcher... conditions) {
+        this.matchers.add(new Or(conditions));
+        return this;
+    }
 }

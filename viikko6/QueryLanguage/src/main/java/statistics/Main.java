@@ -13,6 +13,19 @@ public class Main {
 
         QueryBuilder query = new QueryBuilder();
 
+        Matcher r = query.oneOf(
+                query.playsIn("PHI")
+                        .hasAtLeast(10, "assists")
+                        .hasFewerThan(8, "goals").build(),
+
+                query.playsIn("EDM")
+                        .hasAtLeast(20, "points").build()
+        ).build();
+        for (Player player : stats.matches(r)) {
+            System.out.println( player );
+        }
+        System.out.println("--------------------------------------------------");
+
         Matcher s = query.playsIn("NYR")
                 .hasAtLeast(5, "goals")
                 .hasFewerThan(10, "goals").build();
@@ -20,5 +33,6 @@ public class Main {
         for (Player player : stats.matches(s)) {
             System.out.println( player );
         }
+        System.out.println("--------------------------------------------------");
     }
 }
