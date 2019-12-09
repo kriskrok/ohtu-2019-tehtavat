@@ -7,12 +7,10 @@ import statistics.matcher.*;
 public class QueryBuilder {
     Matcher matcher;
     ArrayList<Matcher> matchers;
-    Map<Integer, String> playingIn;
 
     public QueryBuilder() {
         matchers = new ArrayList<>();
         matcher = new All();
-        playingIn = new HashMap<>();
     }
 
     public Matcher build() {
